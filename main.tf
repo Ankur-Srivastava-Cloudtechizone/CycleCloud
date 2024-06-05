@@ -1,8 +1,3 @@
-# locals {
-#   virtual_machine_name = var.azurerm_linux_virtual_machine.vm_name
-#   cyclecloud_install_script_url = "https://raw.githubusercontent.com/bwatrous/cyclecloud-terraform/master/scripts/cyclecloud_install.py"
-# }
-
 
 # creating a resource group
 resource "azurerm_resource_group" "rg1" {
@@ -102,6 +97,7 @@ resource "azurerm_public_ip" "pip" {
   sku                 = var.public_ip_address_id.sku
 }
 
+# creating NSG
 resource "azurerm_network_security_group" "nsg" {
   name                = "netweb-nsg"
   location            = var.resource_group_name.location
@@ -109,6 +105,7 @@ resource "azurerm_network_security_group" "nsg" {
 
 }
 
+# creating NSG rules
 resource "azurerm_network_security_rule" "nsg_rules" {
   depends_on                  = [azurerm_resource_group.rg1]
   for_each                    = var.nsgrules
@@ -151,7 +148,7 @@ resource "azurerm_network_interface" "nic" {
   location            = var.resource_group_name.location
   resource_group_name = var.resource_group_name.resource_group_name
 
-
+# adding private IP and Public IP to VM
   ip_configuration {
     name                          = var.network_interface_ids.ip_config_name
     subnet_id                     = azurerm_subnet.subnet.id

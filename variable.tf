@@ -17,12 +17,12 @@ variable "azurerm_virtual_machine" {}
 variable "cyclecloud_username" {
   description = "The username for the initial CycleCloud Admin user and VM user"
   #   type        = string
-  #  default = "hpcuser"
+  #  default = ""
 }
 variable "cyclecloud_password" {
   description = "The initial password for the CycleCloud Admin user"
   #   type        = string
-  #  default = "hpcclu@12345"
+  #  default = ""
 }
 
 variable "cyclecloud_user_publickey" {
@@ -41,20 +41,17 @@ variable "cyclecloud_storage_account" {
 
 variable "cyclecloud_tenant_id" {
   description = "Service Principle Tenant ID"
-  # default = "3117010e-6663-46b2-8297-fa40b76e2866"
-  #   type        = string
+ 
 }
 
 variable "cyclecloud_application_id" {
   description = "Service Principle Application ID"
-  # default = "715364b1-0c6a-4132-b37f-2d2a553962df"
-  #   type        = string
+
 }
 
 variable "cyclecloud_application_secret" {
   description = "Service Principle Application Secret"
-  # default = "M3w8Q~przpsppYL1BCYmniZkYOuoshCpNJ-mZcVj"
-  #   type        = string
+
 }
 
 variable "nsgrules" {

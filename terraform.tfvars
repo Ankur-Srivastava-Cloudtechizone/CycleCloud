@@ -59,11 +59,11 @@ cyclecloud_user_publickey = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDYwIl6MgbYGKe
 cyclecloud_storage_account = "cctfstorage"
 
 
-cyclecloud_tenant_id = "3117010e-6663-46b2-8297-fa40b76e2866"
+# cyclecloud_tenant_id = "3117010e-6663-46b2-8297-fa40b76e2866"
 
-cyclecloud_application_id = "715364b1-0c6a-4132-b37f-2d2a553962df"
+# cyclecloud_application_id = "715364b1-0c6a-4132-b37f-2d2a553962df"
 
-cyclecloud_application_secret = "M3w8Q~przpsppYL1BCYmniZkYOuoshCpNJ-mZcVj"
+# cyclecloud_application_secret = "M3w8Q~przpsppYL1BCYmniZkYOuoshCpNJ-mZcVj"
 
 nsgrules = {
   HTTPS = {
